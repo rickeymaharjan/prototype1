@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External files -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo"> </a>
+
+        <div class="search-view" data-search-view>
+          <div class="search-wrapper">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search city..."
+              class="search-field"
+              data-search-field
+            />
+            <span class="m-icon leading-icon">search</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article class="container">
+        <div class="content-left">
+          <!-- CURRENT WEATHER -->
+
+          <section
+            class="section current-weather"
+            aria-label="current weather"
+            data-current-weather
+          >
+            <div class="card card-lg current-weather-card"></div>
+          </section>
+        </div>
+
+        <div class="content-right">
+          <!-- HIGHLIGHTS -->
+          <section
+            class="section highlights"
+            aria-labelledby="highlights-label"
+            data-highlights
+          >
+            <div class="card card-lg">
+              <h2 class="title-2" id="highlights-label">Today's highlights</h2>
+
+              <div class="highlight-list">
+                <div class="card card-sm highlight-card one">
+                  <h3 class="title-3">Air Quality Index</h3>
+
+                  <div class="wrapper">
+                    <span class="m-icon">air</span>
+
+                    <ul class="card-list">
+                      <li class="card-item">
+                        <p class="title-1 aqi-pm">23.3</p>
+
+                        <p class="label-1">PM<sub>2.5</sub></p>
+                      </li>
+
+                      <li class="card-item">
+                        <p class="title-1 aqi-so2">23.3</p>
+
+                        <p class="label-1">SO<sub>2</sub></p>
+                      </li>
+
+                      <li class="card-item">
+                        <p class="title-1 aqi-no2">23.3</p>
+
+                        <p class="label-1">NO<sub>2</sub></p>
+                      </li>
+
+                      <li class="card-item">
+                        <p class="title-1 aqi-o3">23.3</p>
+
+                        <p class="label-1">O<sub>3</sub></p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- <span class="badge aqi-1 label-1" title="aqi message"
+                    >Good</span
+                  > -->
+                </div>
+
+                <div class="card card-sm highlight-card two">
+                  <h3 class="title-3">Sunrise & Sunset</h3>
+
+                  <div class="card-list">
+                    <div class="card-item">
+                      <span class="m-icon">clear_day</span>
+
+                      <div>
+                        <p class="label-1">Sunrise</p>
+
+                        <p class="title-1 sunrise-time">AM</p>
+                      </div>
+                    </div>
+
+                    <div class="card-item">
+                      <span class="m-icon">clear_night</span>
+
+                      <div>
+                        <p class="label-1">Sunset</p>
+
+                        <p class="title-1 sunset-time">PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-sm highlight-card">
+                  <h3 class="title-3">Humidity</h3>
+
+                  <div class="wrapper">
+                    <span class="m-icon">humidity_percentage</span>
+
+                    <p class="title-1 humidity"></p>
+                  </div>
+                </div>
+
+                <div class="card card-sm highlight-card">
+                  <h3 class="title-3">Pressure</h3>
+
+                  <div class="wrapper">
+                    <span class="m-icon">airwave</span>
+
+                    <p class="title-1 pressure"></p>
+                  </div>
+                </div>
+
+                <div class="card card-sm highlight-card">
+                  <h3 class="title-3">Visibility</h3>
+
+                  <div class="wrapper">
+                    <span class="m-icon">visibility</span>
+
+                    <p class="title-1 visibility"></p>
+                  </div>
+                </div>
+                <div class="card card-sm highlight-card">
+                  <h3 class="title-3">Feels Like</h3>
+
+                  <div class="wrapper">
+                    <span class="m-icon">thermostat</span>
+
+                    <p class="title-1 feels-like"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+          <p class="body-3">@rickeymaharjan</p>
+
+          <p class="body-3">
+            Powered By
+            <a
+              href="https://openweathermap.org/api"
+              title="Free OpenWeather Api"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./assets/images/openweather.png"
+                width="150"
+                height="30"
+                loading="lazy"
+                alt="OpenWeather"
+              />
+            </a>
+          </p>
+        </footer>
+
+        <div class="loading" data-loading></div>
+      </article>
+    </main>
+
+    <!-- ERROR SECTION -->
+
+    <section class="error-content" data-error-content>
+      <h2 class="heading">404</h2>
+
+      <p class="body-1">Page not found!</p>
+
+      <a href="#" class="btn-primary">
+        <button class="span go-home-btn">Go Home</button>
+      </a>
+    </section>
+
+    <script src="assets/js/api.js"></script>
+  </body>
+</html>
